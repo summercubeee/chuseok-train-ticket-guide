@@ -3,6 +3,8 @@ import Link from "next/link";
 const navItems = [
   { href: "/schedule", label: "노선별 일정" },
   { href: "/how-to", label: "예매 방법" },
+  { href: "/questions", label: "다들 궁금해하는 질문" },
+  { href: "/my-case", label: "나는 어디 해당되는데?" },
   { href: "/sold-out", label: "매진 대응법" },
   { href: "/sources", label: "출처" },
 ];

@@ -1,0 +1,188 @@
+export interface QSection {
+  heading?: string;
+  body: string;
+}
+
+export interface MiniFaq {
+  q: string;
+  a: string;
+}
+
+export interface Question {
+  slug: string;
+  category: string;
+  question: string;
+  dateAnswered: string;
+  intro: string;
+  sections: QSection[];
+  miniFaq: MiniFaq[];
+  relatedSlugs: string[];
+  sources: { title: string; url: string }[];
+}
+
+// 2026-08-23 기준 취합. 코레일 발표를 인용한 언론보도 기반. 예매 전 공식 채널 재확인 필요.
+export const questions: Question[] = [
+  {
+    slug: "korail-srt-membership-transfer-how-to",
+    category: "예매 방법",
+    question: "SRT만 가입했었는데 지금 어떻게 해야 하나요",
+    dateAnswered: "2026-08-23",
+    intro: "SRT 계정만 있던 경우, 통합회원 전환 웹사이트에서 코레일 신규가입 절차와 기존 이용실적, 혜택 이관 절차를 함께 진행해야 합니다.",
+    sections: [
+      {
+        heading: "가입 상태별로 다릅니다",
+        body: "코레일에만 가입돼 있었다면 자동 전환돼 별도 조치가 필요 없습니다. 코레일과 SRT 둘 다 가입했다면 통합회원으로 자동 전환되지만, SRT 구매 이력과 할인쿠폰을 새 계정으로 옮기려면 전환 웹사이트에서 동의 절차를 거쳐야 합니다. SRT에만 가입했던 경우가 가장 손이 많이 가며, 신규가입과 실적 이관을 모두 해야 합니다.",
+      },
+      {
+        heading: "미리 해두는 게 안전합니다",
+        body: "예매 시작일(교통약자 9월 3일, 일반 9월 7일) 직전에 몰려서 전환하면 시간을 뺏길 수 있으니, 최소 며칠 전에 전환 웹사이트나 코레일톡, SRT 앱에서 미리 절차를 마쳐두는 걸 추천합니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["ticket-cancellation-penalty-fee", "advance-booking-fail-what-to-do"],
+    sources: [
+      { title: "SRT 고객들, 코레일 회원으로 통합 전환하세요, 서울경제", url: "https://www.sedaily.com/article/20067116" },
+    ],
+  },
+  {
+    slug: "ticket-cancellation-penalty-fee",
+    category: "환불/취소",
+    question: "예매했는데 못 가면 위약금 얼마나 내나요",
+    dateAnswered: "2026-08-23",
+    intro: "출발 3시간 전까지는 평일 무료, 주말/공휴일 10%이며, 그 이후로는 최대 20%까지 위약금이 붙습니다. 명절 기간에는 위약금이 더 높게 적용된 사례도 있습니다.",
+    sections: [
+      {
+        heading: "일반 환불 규정",
+        body: "평일은 출발 3시간 전까지 무료 취소, 이후 5% 위약금이 발생합니다. 주말이나 공휴일은 3시간 전까지 10%, 그 이후 20%가 부과됩니다.",
+      },
+      {
+        heading: "명절 기간은 더 엄격합니다",
+        body: "노쇼(예약 부도)와 승차권 선점을 막기 위해 명절 기간 위약금이 강화된 사례가 있어(예: 설 명절 3시간 전 환불 20%로 상향), 추석에도 유사하게 강화된 기준이 적용될 수 있습니다. 정확한 추석 위약금율은 예매 전 코레일 공식 공지로 확인하세요.",
+      },
+    ],
+    miniFaq: [
+      { q: "출발 시각이 지난 뒤에도 환불받을 수 있나요?", a: "네, 출발 후 20분 이내 30%, 20~60분 40%, 60분 이후 70% 위약금이 차감된 후 환불됩니다. 출발 후에는 역에서 신청해야 합니다." },
+    ],
+    relatedSlugs: ["korail-srt-membership-transfer-how-to"],
+    sources: [
+      { title: "설 승차권 환불 위약금 2배 상향, 뉴스1", url: "https://www.news1.kr/realestate/general/5651529" },
+      { title: "승차권 구매/환불/분실, 코레일(공식)", url: "https://www.korail.com/ticket/reserve/guide/pay" },
+    ],
+  },
+  {
+    slug: "pet-companion-train-boarding-rules",
+    category: "예매 방법",
+    question: "반려동물 데리고 기차 탈 수 있나요",
+    dateAnswered: "2026-08-23",
+    intro: "가능합니다. 다만 이동장에 넣어야 하고, 광견병 등 예방접종 증명서류를 준비해야 합니다.",
+    sections: [
+      {
+        heading: "기본 규정",
+        body: "탑승 가능한 반려동물은 개, 고양이 등 소형 동물이며(투견, 맹금류, 뱀 등은 불가), 1인당 이동장 1개, 최대 2마리까지 가능합니다. 이동장을 포함한 크기가 다른 승객의 좌석이나 통로를 침해하지 않아야 합니다.",
+      },
+      {
+        heading: "요금은 별도입니다",
+        body: "반려동물용 좌석은 별도로 성인 요금을 결제해야 합니다. 명절 성수기에는 반려동물 동반 좌석도 빠르게 매진될 수 있어 일찍 예매하는 게 좋습니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: [],
+    sources: [
+      { title: "다가오는 추석, 반려동물과 대중교통 이용할 수 있나요, 정책브리핑(공식)", url: "https://www.korea.kr/multi/visualNewsView.do?newsId=148905592" },
+    ],
+  },
+  {
+    slug: "one-person-max-ticket-count",
+    category: "예매 방법",
+    question: "1인당 몇 장까지 예매할 수 있나요",
+    dateAnswered: "2026-08-23",
+    intro: "명절 승차권은 1인당 최대 12매까지 예매할 수 있고, 한 번에 예매할 수 있는 매수는 6매 이내입니다.",
+    sections: [
+      {
+        body: "가족 여러 명의 표를 한 번에 예매하려면 6매 제한에 걸리지 않는지 확인하고, 필요하면 나눠서 예매해야 합니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["ticket-cancellation-penalty-fee"],
+    sources: [
+      { title: "2026 추석 KTX, SRT 예매 일정, 트립닷컴", url: "https://kr.trip.com/blog/srt-chuseok-reservation/" },
+    ],
+  },
+  {
+    slug: "route-booking-date-missed-what-happens",
+    category: "노선별 일정",
+    question: "노선별 예매일을 놓치면 그 노선은 못 사나요",
+    dateAnswered: "2026-08-23",
+    intro: "아닙니다. 노선별 날짜는 순차적으로 열리는 것이라, 예매 종료일(9월 11일)까지는 계속 시도할 수 있습니다.",
+    sections: [
+      {
+        body: "다만 인기 노선이나 시간대는 해당 노선의 예매 시작일 첫날 빠르게 소진되는 경우가 많습니다. 본인 노선이 열리는 날 예매 시간(오전 7시~오후 1시)에 접속하는 게 가장 유리합니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["advance-booking-fail-what-to-do"],
+    sources: [
+      { title: "2026년 추석 KTX 열차 승차권 예매 일정 발표, 국제뉴스", url: "https://www.gukjenews.com/news/articleView.html?idxno=3665461" },
+    ],
+  },
+  {
+    slug: "advance-booking-fail-what-to-do",
+    category: "매진 대응",
+    question: "예매에 실패했어요, 표를 구할 방법이 없나요",
+    dateAnswered: "2026-08-23",
+    intro: "잔여석 판매와 자동취소된 좌석을 노리는 게 가장 현실적인 방법입니다.",
+    sections: [
+      {
+        heading: "언제 다시 풀리나요",
+        body: "일반예매 종료 직후인 9월 11일 오후 3시부터 팔리지 않은 잔여석이 풀립니다. 또한 결제기한(9월 15일, 사전예매는 9월 18일)을 넘겨 자동 취소되는 좌석도 꾸준히 나오므로, 그 다음 날 코레일+ 앱에서 취소표를 확인하는 게 유효한 전략입니다.",
+      },
+      {
+        heading: "대안 교통수단도 함께 보세요",
+        body: "입석/자유석이 있는 열차, 무궁화호 등 상대적으로 여유 있는 노선, 고속버스나 시외버스도 함께 확인하면 선택지가 넓어집니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["route-booking-date-missed-what-happens", "one-person-max-ticket-count"],
+    sources: [
+      { title: "2026 추석 기차표 예매일정 및 예매방법, 코레일톡", url: "https://korailtalk.co.kr/korea-holiday-train-booking/" },
+    ],
+  },
+  {
+    slug: "transit-vulnerable-advance-booking-proof",
+    category: "노선별 일정",
+    question: "경로, 장애인 사전예매는 어떻게 증빙하나요",
+    dateAnswered: "2026-08-23",
+    intro: "9월 3~4일 교통약자 사전예매 대상은 65세 이상 경로, 등록 장애인, 국가유공자(교통지원 대상), 2026년 새로 포함된 임산부입니다.",
+    sections: [
+      {
+        body: "온라인 예매 시 회원정보에 등록된 생년월일이나 복지카드, 유공자증 등록 정보로 자동 확인되는 경우가 많고, 정확한 증빙 방법은 예매 전 코레일톡, SRT 앱 공지사항에서 확인하는 걸 권장합니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["route-booking-date-missed-what-happens"],
+    sources: [
+      { title: "2026년 추석 승차권 예매 일정, 금강일보", url: "https://www.ggilbo.com/news/articleView.html?idxno=1176474" },
+    ],
+  },
+  {
+    slug: "weekday-off-peak-easier-ticket",
+    category: "매진 대응",
+    question: "추석 연휴 아닌 평일에 이동하면 표 구하기 쉬운가요",
+    dateAnswered: "2026-08-23",
+    intro: "특별수송기간(9월 23일~27일)을 살짝 벗어난 날짜로 일정을 옮기면 상대적으로 여유가 있는 경우가 많습니다.",
+    sections: [
+      {
+        body: "귀성, 귀경 날짜를 하루이틀 앞당기거나 늦추는 것만으로도 예매 성공률이 크게 달라질 수 있습니다. 연휴 전날, 다음 날 근처 날짜도 함께 검색해보는 걸 추천합니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["advance-booking-fail-what-to-do"],
+    sources: [
+      { title: "2026 추석 KTX SRT 기차표 예매 일정과 선예매 꿀팁, 씽크넥션", url: "https://thinknection.idelighter.com/2026/07/2026-chuseok-ktx-srt.html" },
+    ],
+  },
+];
+
+export function getQuestion(slug: string): Question | undefined {
+  return questions.find((q) => q.slug === slug);
+}
