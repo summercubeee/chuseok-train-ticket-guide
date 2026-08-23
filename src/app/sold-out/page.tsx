@@ -3,6 +3,10 @@ import Link from "next/link";
 export const metadata = {
   title: "추석 기차표 매진됐을 때, 취소표 잡는 법과 대안 총정리",
   description: "예매에 실패했을 때 취소표를 잡는 시점, 입석/자유석, 대체 교통수단을 정리했습니다.",
+  openGraph: {
+    title: "추석 기차표 매진, 그래도 구할 수 있는 방법",
+    description: "예매에 실패했을 때 취소표를 잡는 시점, 입석/자유석, 대체 교통수단을 정리했습니다.",
+  },
 };
 
 const strategies = [

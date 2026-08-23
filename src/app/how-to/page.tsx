@@ -3,6 +3,10 @@ import { faq } from "@/data/schedule";
 export const metadata = {
   title: "2026 추석 기차표 예매 방법, 코레일 SRT 통합 후 어디서 예매하나요",
   description: "코레일+ 앱 통합 회원전환 방법과 추석 기차표 예매 절차를 정리했습니다.",
+  openGraph: {
+    title: "추석 기차표 예매 방법, 순서대로 정리",
+    description: "코레일+ 앱 통합 회원전환 방법과 추석 기차표 예매 절차를 정리했습니다.",
+  },
 };
 
 const steps = [

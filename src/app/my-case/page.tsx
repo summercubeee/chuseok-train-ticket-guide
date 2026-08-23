@@ -3,6 +3,10 @@ import MyCaseClient from "./MyCaseClient";
 export const metadata = {
   title: "나는 어디 해당되는데? 내 예매일 확인하기 | 2026 추석 기차표 총정리",
   description: "교통약자 여부와 출발역을 입력하면 내가 언제 예매할 수 있는지 알려드립니다.",
+  openGraph: {
+    title: "나는 어디 해당되는데? 내 예매일 확인하기",
+    description: "교통약자 여부와 출발역을 입력하면 내가 언제 예매할 수 있는지 알려드립니다.",
+  },
 };
 
 export default function MyCasePage() {

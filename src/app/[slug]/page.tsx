@@ -13,6 +13,10 @@ export async function generateMetadata(props: PageProps<"/[slug]">) {
   return {
     title: `${q.question} | 2026 추석 기차표 총정리`,
     description: q.intro,
+    openGraph: {
+      title: q.question,
+      description: q.intro,
+    },
   };
 }
 

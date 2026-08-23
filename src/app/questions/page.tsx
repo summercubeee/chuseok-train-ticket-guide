@@ -4,6 +4,10 @@ import { questions } from "@/data/questions";
 export const metadata = {
   title: "다들 궁금해하는 질문 | 2026 추석 기차표 총정리",
   description: "추석 기차표 예매를 두고 실제로 많이 헷갈려하는 질문들을 모았습니다.",
+  openGraph: {
+    title: "다들 궁금해하는 질문",
+    description: "추석 기차표 예매를 두고 실제로 많이 헷갈려하는 질문들을 모았습니다.",
+  },
 };
 
 export default function QuestionsPage() {

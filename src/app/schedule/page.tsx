@@ -3,6 +3,10 @@ import { keyDates, preBookingRoutes, generalBookingRoutes, SPECIAL_PERIOD } from
 export const metadata = {
   title: "2026 추석 기차표 노선별 예매 일정, 내 노선은 언제인가요",
   description: "2026년 추석 KTX, SRT 노선별 예매 가능일을 정리했습니다.",
+  openGraph: {
+    title: "내 노선은 언제 예매하나요, 노선별 예매 일정",
+    description: "2026년 추석 KTX, SRT 노선별 예매 가능일을 정리했습니다.",
+  },
 };
 
 export default function SchedulePage() {

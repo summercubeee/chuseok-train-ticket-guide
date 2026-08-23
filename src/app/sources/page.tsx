@@ -1,5 +1,10 @@
 export const metadata = {
   title: "출처, 2026 추석 기차표 예매 총정리",
+  description: "이 사이트의 예매 일정 정보에 대한 공식 채널과 참고 기사 출처 목록입니다.",
+  openGraph: {
+    title: "출처",
+    description: "이 사이트의 예매 일정 정보에 대한 공식 채널과 참고 기사 출처 목록입니다.",
+  },
 };
 
 const officialLinks = [
