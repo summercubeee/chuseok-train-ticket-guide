@@ -26,6 +26,11 @@ export const metadata: Metadata = {
       "application/rss+xml": `${SITE_URL}/feed.xml`,
     },
   },
+  verification: {
+    other: {
+      "naver-site-verification": "d1ff9104073f9d1990c9ca46d8791791e4d2a33a",
+    },
+  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
