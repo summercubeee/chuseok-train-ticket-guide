@@ -181,6 +181,46 @@ export const questions: Question[] = [
       { title: "2026 추석 KTX SRT 기차표 예매 일정과 선예매 꿀팁, 씽크넥션", url: "https://thinknection.idelighter.com/2026/07/2026-chuseok-ktx-srt.html" },
     ],
   },
+  {
+    slug: "ktx-first-class-vs-standard-difference",
+    category: "예매 방법",
+    question: "KTX 특실이랑 일반실, 뭐가 다른가요",
+    dateAnswered: "2026-08-23",
+    intro: "좌석 배치와 간격, 서비스, 요금이 다릅니다. 특실은 전 좌석이 순방향이고 좌석 간격이 넓으며 간단한 스낵, 음료 서비스가 포함됩니다.",
+    sections: [
+      {
+        body: "일반실은 순방향과 역방향 좌석이 섞여 있지만 특실은 전 좌석이 순방향입니다. 요금은 구간마다 다르지만 대체로 일반실보다 40% 안팎 비쌉니다. 예를 들어 서울, 부산 구간은 일반실이 약 5만9,800원, 특실이 약 8만3,700원 수준입니다. 명절엔 특실이 상대적으로 늦게까지 남아있는 경우가 있어, 일반실이 매진됐다면 특실도 확인해볼 만합니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["advance-booking-fail-what-to-do"],
+    sources: [
+      { title: "KTX 특실 일반실 차이는, 좌석 서비스 가격, 이즐 블로그", url: "https://blog.myezl.com/ktx-%ED%8A%B9%EC%8B%A4-%EC%9D%BC%EB%B0%98%EC%8B%A4-%EC%B0%A8%EC%9D%B4-%EC%A2%8C%EC%84%9D-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B0%80%EA%B2%A9-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C/" },
+    ],
+  },
+  {
+    slug: "macro-ticket-scalping-punishment",
+    category: "환불/취소",
+    question: "매크로로 예매하면 처벌받나요",
+    dateAnswered: "2026-08-23",
+    intro: "네, 코레일은 매크로를 이용한 부정예매, 암표 거래를 업무방해죄 등으로 수사의뢰하며 단속을 강화하고 있습니다.",
+    sections: [
+      {
+        heading: "실제 단속 규모",
+        body: "코레일의 매크로 탐지 시스템은 하루 평균 약 1만 건, 연간 약 160만 건의 비정상적 접근을 차단하고 있습니다. 지난 설 명절에는 171만~3,100만 건에 이르는 불법 접속을 시도한 피의자 6명이 업무방해 혐의로 검찰에 송치되기도 했습니다.",
+      },
+      {
+        heading: "일반 이용자가 알아둘 점",
+        body: "정상적인 매수 제한(1인당 12매, 1회 6매) 안에서 여러 계정이나 자동화 프로그램을 이용해 반복 접속하는 행위는 적발 대상이 될 수 있습니다. 가족 표를 나눠서 여러 번 정상 절차로 예매하는 것과는 다른 문제입니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["one-person-max-ticket-count"],
+    sources: [
+      { title: "매크로 악용 철도 승차권 불법 거래, 시사저널e", url: "https://www.sisajournal-e.com/news/articleView.html?idxno=223535" },
+      { title: "추석 기차 승차권 매크로 예매 단속, 정책브리핑(공식)", url: "https://www.korea.kr/multi/visualNewsView.do?newsId=148949369&repCode=B00002&repCodeType=%EC%A0%95%EB%B6%80%EB%B6%80%EC%B2%98&pWise=main&pWiseMain=T1_4&pWiseMinistry=ministryNews" },
+    ],
+  },
 ];
 
 export function getQuestion(slug: string): Question | undefined {
