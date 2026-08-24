@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { keyDates, preBookingRoutes, generalBookingRoutes, SPECIAL_PERIOD } from "@/data/schedule";
+import { routeNameToSlug } from "@/data/routes";
 
 export const metadata = {
   title: "2026 추석 기차표 노선별 예매 일정, 내 노선은 언제인가요",
@@ -8,6 +10,37 @@ export const metadata = {
     description: "2026년 추석 KTX, SRT 노선별 예매 가능일을 정리했습니다.",
   },
 };
+
+function RouteLinks({ text }: { text: string }) {
+  const parenIndex = text.indexOf("(");
+  const mainPart = parenIndex === -1 ? text : text.slice(0, parenIndex).trim();
+  const suffix = parenIndex === -1 ? "" : text.slice(parenIndex);
+  const tokens = mainPart.split(",").map((t) => t.trim()).filter(Boolean);
+
+  return (
+    <>
+      {tokens.map((token, i) => {
+        const slug = routeNameToSlug[token];
+        return (
+          <span key={`${token}-${i}`}>
+            {slug ? (
+              <Link
+                href={`/routes/${slug}`}
+                className="text-amber-700 hover:underline dark:text-amber-400"
+              >
+                {token}
+              </Link>
+            ) : (
+              token
+            )}
+            {i < tokens.length - 1 ? ", " : ""}
+          </span>
+        );
+      })}
+      {suffix}
+    </>
+  );
+}
 
 export default function SchedulePage() {
   const faqJsonLd = {
@@ -51,7 +84,9 @@ export default function SchedulePage() {
                 <td className="p-3 font-medium text-zinc-700 dark:text-zinc-300">
                   {r.date}({r.weekday})
                 </td>
-                <td className="p-3 text-zinc-600 dark:text-zinc-400">{r.routes}</td>
+                <td className="p-3 text-zinc-600 dark:text-zinc-400">
+                  <RouteLinks text={r.routes} />
+                </td>
               </tr>
             ))}
           </tbody>
@@ -76,12 +111,21 @@ export default function SchedulePage() {
                 <td className="p-3 font-medium text-zinc-700 dark:text-zinc-300">
                   {r.date}({r.weekday})
                 </td>
-                <td className="p-3 text-zinc-600 dark:text-zinc-400">{r.routes}</td>
+                <td className="p-3 text-zinc-600 dark:text-zinc-400">
+                  <RouteLinks text={r.routes} />
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <p className="mb-10 text-sm text-zinc-500 dark:text-zinc-400">
+        진한 색으로 표시된 노선명을 누르면 해당 노선의 정차역, 소요시간, 매진 시 대안을 담은{" "}
+        <Link href="/routes" className="text-amber-700 hover:underline dark:text-amber-400">
+          노선별 상세 가이드
+        </Link>
+        로 이동합니다.
+      </p>
 
       <h2 className="mb-4 text-lg font-bold">전체 일정 요약</h2>
       <div className="space-y-3">

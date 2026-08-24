@@ -29,6 +29,12 @@ export default function Home() {
           >
             예매 방법 보기
           </Link>
+          <Link
+            href="/routes"
+            className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800"
+          >
+            노선별 상세 가이드
+          </Link>
         </div>
       </section>
 
