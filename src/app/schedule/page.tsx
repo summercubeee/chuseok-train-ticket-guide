@@ -26,6 +26,7 @@ function RouteLinks({ text }: { text: string }) {
             {slug ? (
               <Link
                 href={`/routes/${slug}`}
+                prefetch={false}
                 className="text-amber-700 hover:underline dark:text-amber-400"
               >
                 {token}

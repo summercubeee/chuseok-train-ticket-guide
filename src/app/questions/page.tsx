@@ -32,6 +32,7 @@ export default function QuestionsPage() {
                 <li key={q.slug}>
                   <Link
                     href={`/${q.slug}`}
+                    prefetch={false}
                     className="block rounded-xl border border-zinc-200 bg-white p-4 text-sm text-zinc-700 transition-colors hover:border-amber-300 hover:text-amber-700 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-300"
                   >
                     {q.question}
