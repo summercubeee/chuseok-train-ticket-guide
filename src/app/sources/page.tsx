@@ -18,6 +18,10 @@ const newsLinks = [
   { title: "KTX, 2026년 추석 승차권 예매 일정 공개, 금강일보", url: "https://www.ggilbo.com/news/articleView.html?idxno=1176474" },
 ];
 
+const incidentLinks = [
+  { title: "\"접속 폭주로\"...추석 기차표 예매 첫날 '먹통', 서울이코노미뉴스(2025-09-17)", url: "https://www.seouleconews.com/news/articleView.html?idxno=86354" },
+];
+
 export default function SourcesPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
@@ -44,8 +48,28 @@ export default function SourcesPage() {
       </ul>
 
       <h2 className="mb-4 text-lg font-bold">참고 기사</h2>
-      <ul className="space-y-2 text-sm">
+      <ul className="mb-10 space-y-2 text-sm">
         {newsLinks.map((s) => (
+          <li key={s.url}>
+            <a
+              href={s.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-600 hover:underline dark:text-sky-400"
+            >
+              {s.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <h2 className="mb-4 text-lg font-bold">접속 장애 관련 출처</h2>
+      <p className="mb-4 text-sm text-zinc-600 dark:text-zinc-400">
+        예매 당일 접속 폭주·먹통 대응 페이지는 작년(2025년) 추석 예매 첫날 실제 사례를 근거로
+        작성했습니다.
+      </p>
+      <ul className="space-y-2 text-sm">
+        {incidentLinks.map((s) => (
           <li key={s.url}>
             <a
               href={s.url}
