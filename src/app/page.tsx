@@ -38,6 +38,39 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="mb-16 rounded-2xl border-2 border-red-200 bg-red-50 p-6 dark:border-red-900/50 dark:bg-red-950/20 sm:p-8">
+        <p className="mb-2 inline-block rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-700 dark:bg-red-900/40 dark:text-red-300">
+          예매 당일 가장 흔한 문제
+        </p>
+        <h2 className="mb-3 text-xl font-bold sm:text-2xl">
+          예매 시작하자마자 화면이 멈춰도 당황하지 마세요
+        </h2>
+        <p className="mb-4 leading-relaxed text-zinc-700 dark:text-zinc-300">
+          작년 추석(2025년) 예매 첫날, 이용객이 전년보다 72% 급증하면서 코레일 앱과 홈페이지가
+          접속 폭주로 먹통이 됐습니다. &quot;명절 예매 화면으로 이동 중입니다&quot;라는 문구에서
+          화면이 안 넘어가고, 대기 순서가 수십만 번대까지 밀려 30분 넘게 기다려야 했던 분들이
+          많았습니다. 같은 시간, <strong>전국 역 매표 창구에서는 승차권이 정상적으로 발매되고
+          있었습니다.</strong> 이번 추석에도 같은 상황이 재발할 가능성이 있으니, 온라인이 계속
+          안 풀린다면 새로고침만 반복하기보다 가까운 역으로 이동하는 게 더 빠를 수 있습니다.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <a
+            href="https://train-hub.bizmetric.kr/station"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-red-700"
+          >
+            가까운 역 찾기 (트레인허브) ↗
+          </a>
+          <Link
+            href="/korail-app-not-working-alternative-booking"
+            className="rounded-full border border-red-300 px-6 py-3 text-sm font-semibold text-red-700 transition-colors hover:bg-red-100 dark:border-red-800 dark:text-red-300 dark:hover:bg-red-950/40"
+          >
+            자세히 보기 →
+          </Link>
+        </div>
+      </section>
+
       <section className="mb-16">
         <h2 className="mb-6 text-xl font-bold">핵심 일정 한눈에</h2>
         <div className="space-y-3">
