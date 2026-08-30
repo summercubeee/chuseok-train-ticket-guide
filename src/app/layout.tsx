@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AdSenseLoader from "@/components/AdSenseLoader";
+import VisitorTracking from "@/components/VisitorTracking";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
 
 const geistSans = Geist({
@@ -51,6 +53,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
         <Footer />
         <AdSenseLoader />
+        <Suspense fallback={null}>
+          <VisitorTracking />
+        </Suspense>
       </body>
     </html>
   );
