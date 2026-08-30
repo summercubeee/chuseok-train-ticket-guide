@@ -221,6 +221,60 @@ export const questions: Question[] = [
       { title: "추석 기차 승차권 매크로 예매 단속, 정책브리핑(공식)", url: "https://www.korea.kr/multi/visualNewsView.do?newsId=148949369&repCode=B00002&repCodeType=%EC%A0%95%EB%B6%80%EB%B6%80%EC%B2%98&pWise=main&pWiseMain=T1_4&pWiseMinistry=ministryNews" },
     ],
   },
+  {
+    slug: "korail-app-not-working-alternative-booking",
+    category: "접속 장애",
+    question: "코레일 앱·홈페이지 먹통이면 표 못 구하나요",
+    dateAnswered: "2026-08-27",
+    intro: "작년 추석(2025년) 예매 첫날에도 접속 폭주로 코레일 앱과 홈페이지가 먹통이 된 사례가 있었습니다. 이럴 때 실제로 통했던 대안은 온라인이 아니라 역 매표 창구였습니다.",
+    sections: [
+      {
+        heading: "역 매표 창구는 정상 운영됐습니다",
+        body: "작년 추석 연휴 기차표 예매 첫날, 온라인 예매 시작 직후부터 코레일 앱과 웹사이트가 접속 폭주로 지연됐지만, 전국 역 매표 창구에서는 승차권이 정상적으로 발매됐습니다(아래 출처 참고). 온라인 접속이 계속 안 된다면 새로고침만 반복하기보다 가까운 역 창구를 직접 방문하는 게 더 확실한 방법입니다.",
+      },
+      {
+        heading: "온라인으로 계속 시도한다면",
+        body: "코레일 측은 평소 명절보다 늘어난 예매객이 한꺼번에 몰리면서 시스템 장애가 발생했다고 설명했습니다. 무리하게 반복 새로고침을 하기보다 코레일톡 앱과 PC 웹사이트를 함께 열어두고 상황을 보며 시도하는 편이 낫습니다.",
+      },
+      {
+        heading: "매크로·자동화 프로그램은 다른 문제입니다",
+        body: "접속이 안 된다고 매크로나 자동 새로고침 프로그램을 쓰는 건 업무방해 등으로 처벌 대상이 될 수 있습니다. 위에서 안내한 역 창구 방문은 정상적인 예매 채널을 이용하는 방법일 뿐, 불법 우회와는 다릅니다.",
+      },
+    ],
+    miniFaq: [
+      { q: "왜 매년 예매 첫날마다 이런 일이 반복되나요", a: "예매 시작 시각에 이용자가 한꺼번에 몰리기 때문입니다. 작년에는 전년 대비 이용객이 72% 급증하면서 접속 지연이 발생했다고 코레일이 밝혔습니다." },
+    ],
+    relatedSlugs: ["advance-booking-fail-what-to-do", "macro-ticket-scalping-punishment", "holiday-booking-screen-stuck-loading-message"],
+    sources: [
+      { title: "\"접속 폭주로\"...추석 기차표 예매 첫날 '먹통', 서울이코노미뉴스", url: "https://www.seouleconews.com/news/articleView.html?idxno=86354" },
+    ],
+  },
+  {
+    slug: "holiday-booking-screen-stuck-loading-message",
+    category: "접속 장애",
+    question: "\"명절 예매 화면으로 이동 중입니다\"에서 안 넘어가요",
+    dateAnswered: "2026-08-27",
+    intro: "작년 추석 예매 첫날, 코레일 앱과 홈페이지가 '명절 예매 화면으로 이동 중입니다'라는 문구에서 멈춘 채 다음 화면으로 넘어가지 않는 문제가 있었습니다. 접속 자체가 안 되는 게 아니라 이 화면에서 멈추는 게 특징이었습니다.",
+    sections: [
+      {
+        heading: "이 화면에서 안 넘어가는 건 오류가 아니라 대기 상태입니다",
+        body: "작년 사례를 보면 이 문구가 뜬 뒤로는 뒤에서 대기열을 처리하는 중이라, 앱을 껐다 켜거나 새로고침을 반복해도 대기 순서만 초기화될 뿐 더 빨리 넘어가지 않았습니다. 대기 화면으로 넘어간 뒤에도 순서가 수십만 번대까지 밀려 30분 이상 걸린 경우가 많았습니다.",
+      },
+      {
+        heading: "그래도 안 넘어간다면 역 창구로",
+        body: "같은 시간, 전국 역 매표 창구에서는 승차권이 정상적으로 발매되고 있었습니다(아래 출처 참고). 화면이 계속 멈춰 있다면 온라인을 붙잡고 있기보다 가까운 역으로 이동해 창구에서 직접 예매하는 게 더 빠를 수 있습니다.",
+      },
+      {
+        heading: "코레일 측 설명",
+        body: "코레일은 평소 명절보다 늘어난 연휴 기간에 예매객이 한꺼번에 몰리면서 시스템 장애가 발생했다고 밝혔고, 긴급 조치와 시스템 점검을 진행하겠다고 안내했습니다. 같은 문제가 이번 추석에도 재발할 가능성을 염두에 두고 예매 당일 대안을 미리 알아두는 걸 추천합니다.",
+      },
+    ],
+    miniFaq: [],
+    relatedSlugs: ["korail-app-not-working-alternative-booking", "advance-booking-fail-what-to-do"],
+    sources: [
+      { title: "\"접속 폭주로\"...추석 기차표 예매 첫날 '먹통', 서울이코노미뉴스", url: "https://www.seouleconews.com/news/articleView.html?idxno=86354" },
+    ],
+  },
 ];
 
 export function getQuestion(slug: string): Question | undefined {
